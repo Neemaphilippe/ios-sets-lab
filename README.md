@@ -13,6 +13,14 @@ Input: heights of trees below:
 Output:
 `169.375`
 
+```
+var treeHeights: Set<Int> =  [161, 182, 161, 154, 176, 170, 167, 171, 170, 174]
+var sum = 0
+for treesHeight in treeHeights {
+sum += treesHeight
+print(sum)
+}
+```
 
 ## Question 2
 
@@ -20,7 +28,27 @@ Determine if a String is a pangram. A pangram is a string that contains every le
 
  e.g `"The quick brown fox jumps over the lazy dog"` is a pangram
  e.g `"The quick brown fox jumped over the lazy dog"` is NOT a pangram
+ ```
+ var alphabet: Set<String> = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+ var input = "The quick brown fox jumps over the lazy dog"
+ var characterSet = Set<String>()
+ 
+ for character in input {
+ if character != " "{
+ characterSet.insert(character.lowercased())
+ }
+ 
+ }
+ print(characterSet)
+ print(alphabet)
+ 
+ if characterSet == alphabet {
+ print("This is a pangram")
+ }else{
+ print("This is not a pangram")
+ }
 
+```
 
 ## Question 3
 
@@ -91,7 +119,7 @@ print(spaceships.count)
 - 1
 - This code will compile but crash
 
-
+``` This code will not compile ```
 ## Question 7
 
 What output will be produced by the code below?
@@ -117,3 +145,5 @@ if spaceships1.isSubset(of: spaceships2) {
 - This code will not compile
 - "This is a subset"
 - Nothing will be output
+
+```This code will not compile```
